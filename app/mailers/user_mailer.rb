@@ -13,7 +13,7 @@ class UserMailer < ActionMailer::Base
   	@url  = 'https://github.com/heyjoeb/thunder'
     @user = user
     @friend = friend
-  	mail(to: [user.email, friend.email], subject: 'You have a match on Thunder!')
+  	mail(to: [user.email], subject: 'You have a match on Thunder!')
   end
 
 

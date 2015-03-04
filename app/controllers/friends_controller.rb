@@ -17,6 +17,7 @@ class FriendsController < ApplicationController
     if @friend.liked?(current_user)
       #mails a respectivos matches
       UserMailer.match_email(current_user, @friend).deliver
+      UserMailer.match_email(@friend, current_user).deliver
       
 
       render :match
